@@ -1,0 +1,15 @@
+Aerial Person Studio 1.0 - Build Validation
+===========================================
+
+Validated during package creation:
+- All Python source files compile successfully with Python compileall.
+- Existing-CVAT-ZIP import was exercised on a synthetic Train/Val/Test workspace.
+- Annotation persistence was exercised on a synthetic person bounding box.
+- YOLO, VisDrone-style, COCO, CVAT XML and report exporters were exercised end-to-end on synthetic data.
+- Source-aware preparation was exercised on synthetic grouped sources.
+
+Not executed in the build container:
+- The live PySide6 Windows GUI, because the artifact build container does not provide the Windows/PySide6 desktop runtime.
+- A real YOLO .pt inference pass, because the user's trained model is intentionally not embedded in this package.
+
+Windows setup scripts are included so dependencies are installed in a short runtime path under LOCALAPPDATA, avoiding the long-path PyTorch issue encountered earlier.

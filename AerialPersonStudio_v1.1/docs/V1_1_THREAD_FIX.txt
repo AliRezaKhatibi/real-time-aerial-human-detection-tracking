@@ -1,0 +1,11 @@
+Aerial Person Studio v1.1 Thread Fix
+
+This release changes the background worker completion/error signal handling so
+all GUI updates are guaranteed to execute on the Qt main thread.
+
+It addresses the warning:
+QObject::setParent: Cannot set parent, new parent is in a different thread
+
+No dataset, preparation, auto-label, annotation, or export behavior was removed.
+Your YOLO .pt model remains external and should be copied to models/prelabel/
+or selected from the Auto Label tab.
