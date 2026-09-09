@@ -17,9 +17,8 @@
 ## 🎥 Real-Time Tracking Demo
 
 | YOLO26s + ByteTrack | RT-DETR-R18 + ByteTrack |
-|:|:![Detection and Tracking Demo](assets/videos/RT-deter-R18.gif)
-:|
-| Demo video | Demo video |
+![Detection and Tracking Demo](assets/videos/RT-deter-R18.gif)
+
 
 ![Detection and Tracking Demo](assets/images/image.png.jpeg)
 ## Overview
