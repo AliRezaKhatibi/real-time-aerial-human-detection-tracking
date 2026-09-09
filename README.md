@@ -14,7 +14,11 @@
 [![CUDA](https://img.shields.io/badge/CUDA-13.0-76B900?logo=nvidia)](https://developer.nvidia.com/cuda)
 
 </p>
+## 🎥 Real-Time Tracking Demo
 
+| YOLO26s + ByteTrack | RT-DETR-R18 + ByteTrack |
+|:---:|:---:|
+| Demo video | Demo video |
 ---
 
 ## Overview
