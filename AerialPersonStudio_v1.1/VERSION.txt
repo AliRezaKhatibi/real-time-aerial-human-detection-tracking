@@ -1,0 +1,1 @@
+Aerial Person Studio v1.1 - Windows thread-safety fix

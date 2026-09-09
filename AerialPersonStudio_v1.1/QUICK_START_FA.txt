@@ -1,0 +1,41 @@
+AERIAL PERSON STUDIO - راهنمای سریع ویندوز
+==========================================
+
+1) پوشه را از ZIP خارج کنید. ترجیحاً مسیر کوتاه باشد، مثال:
+   D:\AerialPersonStudio
+
+2) روی START_HERE.bat دوبار کلیک کنید.
+   اسکریپت Python 3.12 را پیدا می‌کند و محیط اجرا را در مسیر کوتاه %LOCALAPPDATA%\AerialPersonStudio\venv-py312 می‌سازد تا خطای طولانی بودن مسیر PyTorch رخ ندهد؛ سپس پیش‌نیازها را نصب می‌کند.
+
+3) مدل خود را اینجا قرار دهید:
+   models\prelabel\yolo26s_visdrone_best.pt
+   یا از داخل تب Auto Label هر فایل .pt را انتخاب کنید.
+
+برای ادامه پروژه فعلی:
+---------------------
+- برنامه را اجرا کنید.
+- Open Workspace را بزنید.
+- ریشه پروژه فعلی را انتخاب کنید؛ همان پوشه‌ای که raw و work و outputs داخل آن است.
+- Dashboard > Import Existing CVAT ZIPs into Editor
+- برنامه train_images.zip / val_images.zip / test_images.zip فعلی را وارد محیط ویرایش می‌کند.
+- Auto Label > مدل را انتخاب کنید > Split را انتخاب کنید > Run Auto Label
+- Annotate & Review > باکس‌ها را بررسی، جابه‌جا، Resize، حذف یا اضافه کنید.
+- Delete Image تصویر را به Trash می‌برد.
+- Mark as Background تمام باکس‌ها را حذف می‌کند ولی تصویر را به عنوان Negative نگه می‌دارد.
+- Export > خروجی YOLO / VisDrone / COCO / CVAT XML / Report را بگیرید.
+
+برای پروژه جدید:
+----------------
+- Prepare Data > Add Raw Images / Add Raw Videos
+- تنظیمات را انتخاب کنید.
+- Run Complete Preparation Pipeline
+- سپس Auto Label و Review و Export.
+
+نکته مدل تک‌کلاسه:
+اگر مدل داخلی نام کلاس را item ذخیره کرده باشد ولی مدل تک‌کلاسه انسان باشد، برنامه آن را در خروجی به person نگاشت می‌کند.
+
+اجرای دفعات بعد:
+RUN_STUDIO.bat
+
+ساخت نسخه EXE در ویندوز:
+BUILD_WINDOWS_EXE.bat

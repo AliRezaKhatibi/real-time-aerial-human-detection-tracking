@@ -1,0 +1,29 @@
+{
+  "prepare": {
+    "video_frame_interval_seconds": 1.0,
+    "min_width": 320,
+    "min_height": 240,
+    "blur_filter_enabled": true,
+    "blur_threshold": 35.0,
+    "black_filter_enabled": true,
+    "black_mean_threshold": 8.0,
+    "black_std_threshold": 4.0,
+    "duplicate_filter_enabled": true,
+    "phash_hamming_threshold": 4,
+    "train_ratio": 0.8,
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "jpeg_quality": 95
+  },
+  "autolabel": {
+    "model_path": "models/prelabel/yolo26s_visdrone_best.pt",
+    "confidence": 0.1,
+    "iou": 0.7,
+    "imgsz": 1280,
+    "max_det": 3000,
+    "device": "auto",
+    "tiled_inference": false,
+    "tile_size": 960,
+    "tile_overlap": 0.2
+  }
+}
